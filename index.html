@@ -16,34 +16,6 @@
 	* {box-sizing:border-box}
 	.mySlides {display:none}
 
-	/* Caption text */
-	.text {
-	
-		color: #f2f2f2;
-		font-size: 15px;
-		padding: 8px 12px;
-		position: absolute;
-		bottom: 8px;
-		width: 100%;
-		text-align: center;
-		
-	}
-
-	/* The dots/bullets/indicators */
-	.dot {
-		height: 13px;
-		width: 13px;
-		margin: 0 2px;
-		background-color: #bbb;
-		border-radius: 50%;
-		display: inline-block;
-		transition: background-color 1s ease;
-	}
-
-	.active {
-		background-color: #717171;
-	}
-
 	/* Fading animation */
 	.fade {
 		-webkit-animation-name: fade;
@@ -60,11 +32,6 @@
 	@keyframes fade {
 		from {opacity: .4} 
 		to {opacity: 1}
-	}
-
-	/* On smaller screens, decrease text size */
-		@media only screen and (max-width: 300px) {
-		.text {font-size: 11px}
 	}
 
 	
@@ -91,7 +58,7 @@
 	.bg {
 	
 		/* The image used */
-		//background-image: url("BlueMosqueBG.jpg");
+		background-color: white;
 		height: 100%; 
 		padding: 0;
 		display: block;
@@ -137,42 +104,26 @@
 	<br><br>
 	
 	<!-- Header -->
-	<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px">
-	
-		<div class="slideshow-container">
-
-			<div class="mySlides fade">
-			
-				<img src="BlueMosque.jpg" style="width:100%;min-height:153px;max-height:333px">
-				
-			</div>
-
-			<div class="mySlides fade">
-			
-				<img src="Ayah21.jpg" style="width:100%;min-height:153px;max-height:333px">
-				
-			</div>
-
-			<div class="mySlides fade">
-			
-				<img src="TrustAllah.jpg" style="width:100%;min-height:153px;max-height:333px">
-				
-			</div>
-
-		</div>
-
-		<div style="text-align:center">
+	<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
 		
-			<span class="dot"></span> 
-			<span class="dot"></span> 
-			<span class="dot"></span>
-			
+		<!-- Automatic Slideshow Images -->
+		<div class="mySlides w3-display-container w3-center">
+			<img src="BlueMosque.jpg" style="width:100%;min-height:153px;max-height:303px"">
 		</div>
-	
+		
+		<div class="mySlides w3-display-container w3-center">
+			<img src="Ayah21.jpg" style="width:100%;min-height:153px;max-height:303px"">
+		</div>
+		
+		<div class="mySlides w3-display-container w3-center">
+			<img src="TrustAllah.jpg" style="width:100%;min-height:153px;max-height:303px"">
+		</div>
+		<br>
+				
 	</header>
 	
 	<!-- Page Container -->
-	<div class="w3-content w3-margin-top" style="max-width:1400px;">
+	<div class="w3-content" style="max-width:1400px;">
 
 		<!-- The Grid -->
 		<div class="w3-row-padding">
@@ -234,7 +185,7 @@
 					
 					<h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr 2014 - <span class="w3-tag w3-green w3-round">Current</span></h6>
 					
-					<h6 class="w3-text-green"><a href="https://www.google.com/maps/place/Islamic+Society+of+Greater+Lowell/@42.6213637,-71.3524624,17z/data=!4m13!1m7!3m6!1s0x89e3a365c67daa99:0x92248105fba7b723!2s131+Stedman+St,+Chelmsford,+MA+01824!3b1!8m2!3d42.6213598!4d-71.3502684!3m4!1s0x89e3a365a40c47c7:0x2b1626a7cf5b87c!8m2!3d42.6214113!4d-71.3501932"><i class="fa fa-map-marker fa-fw w3-margin-right"></i>131 Stedman St Chelmsford, MA 01824</a></h6>
+					<h6 class="w3-text-green"><a href="https://www.google.com/maps/place/Islamic+Society+of+Greater+Lowell/@42.6213637,-71.3524624,17z/data=!4m13!1m7!3m6!1s0x89e3a365c67daa99:0x92248105fba7b723!2s131+Stedman+St,+Chelmsford,+MA+01824!3b1!8m2!3d42.6213598!4d-71.3502684!3m4!1s0x89e3a365a40c47c7:0x2b1626a7cf5b87c!8m2!3d42.6214113!4d-71.3501932"><i class="fa fa-map-marker fa-fw w3-margin-right"></i>131 Stedman St Chelmsford MA 01824</a></h6>
 					
 					<h6 class="w3-text-green"><i class="fa fa-address-card fa-fw w3-margin-right"></i>(978) 970-5552 Haniff Muhammad (President)</h6>
 					
@@ -358,29 +309,24 @@
 	
 	<script>
 	
-		var slideIndex = 0;
-		showSlides();
+		// Automatic Slideshow - change image every 4 seconds
+		var myIndex = 0;
+		carousel();
 
-		function showSlides() {
+		function carousel() {
 		
 			var i;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
+			var x = document.getElementsByClassName("mySlides");
 			
-			for (i = 0; i < slides.length; i++) {
-				slides[i].style.display = "none";  
+			for (i = 0; i < x.length; i++) {
+			
+				x[i].style.display = "none";  
+			
 			}
-			
-			slideIndex++;
-			if (slideIndex> slides.length) {slideIndex = 1}
-			
-			for (i = 0; i < dots.length; i++) {
-				dots[i].className = dots[i].className.replace(" active", "");
-			}
-			
-			slides[slideIndex-1].style.display = "block";  
-			dots[slideIndex-1].className += " active";
-			setTimeout(showSlides, 4000); // Change image every 4 seconds
+			myIndex++;
+			if (myIndex > x.length) {myIndex = 1}    
+			x[myIndex-1].style.display = "block";  
+			setTimeout(carousel, 5000);   
 			
 		}
 		
