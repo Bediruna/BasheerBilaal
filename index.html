@@ -11,28 +11,76 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<style>
 
+<style>
+	* {box-sizing:border-box}
+	.mySlides {display:none}
+
+	/* Caption text */
+	.text {
+	
+		color: #f2f2f2;
+		font-size: 15px;
+		padding: 8px 12px;
+		position: absolute;
+		bottom: 8px;
+		width: 100%;
+		text-align: center;
+		
+	}
+
+	/* The dots/bullets/indicators */
+	.dot {
+		height: 13px;
+		width: 13px;
+		margin: 0 2px;
+		background-color: #bbb;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 1s ease;
+	}
+
+	.active {
+		background-color: #717171;
+	}
+
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 2.5s;
+		animation-name: fade;
+		animation-duration: 2.5s;
+	}
+
+	@-webkit-keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+
+	@keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+
+	/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		.text {font-size: 11px}
+	}
+
+	
 	html,body,h1,h2,h3,h4,h5,h6 {
 		
 		font-family: "Roboto", sans-serif
 	
 	}
-
 	h1 {
-
 		font-size: 500%;
 		font-family: "Lucida Calligraphy", Times, serif;
-
 	}
-
 	h2{
-
 		//font-size: 500%;
 		font-family: "Lucida Calligraphy", Times, serif;      
-
 	}
-
 	body, html {
 	
 		height: 100%;
@@ -40,19 +88,16 @@
 		padding: 0;
 	
 	}
-
 	.bg {
 	
 		/* The image used */
-		background-image: url("BlueMosqueBG.jpg");
+		//background-image: url("BlueMosqueBG.jpg");
 		height: 100%; 
-
 		padding: 0;
 		display: block;
 		margin: 0 auto;
 		max-height: 100%;
 		max-width: 100%;
-
 		/* Center and scale the image */
 		background-position: center;
 		background-repeat: no-repeat;
@@ -67,17 +112,65 @@
 		cursor: auto;
 		
 	}
-
 	a:link:active, a:visited:active {
 	
 		color: (internal value);
 	
 	}
-
 </style>
   
 <body class="bg">
+
+	<!-- Navbar (sit on top) -->
+	<div class="w3-top">
+		<div class="w3-bar w3-white w3-padding w3-card-2" style="letter-spacing:4px;">
+			<a href="#home" class="w3-bar-item w3-button">Imam Basheer Bilaal</a>
+			<!-- Right-sided navbar links. Hide them on small screens -->
+			<div class="w3-right w3-hide-small">
+				<a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+				<a href="#resources" class="w3-bar-item w3-button">Resources</a>
+				<a href="#contact" class="w3-bar-item w3-button">Contact</a>
+			</div>
+		</div>
+	</div>
 	
+	<br><br>
+	
+	<!-- Header -->
+	<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px">
+	
+		<div class="slideshow-container">
+
+			<div class="mySlides fade">
+			
+				<img src="BlueMosque.jpg" style="width:100%;min-height:153px;max-height:333px">
+				
+			</div>
+
+			<div class="mySlides fade">
+			
+				<img src="Ayah21.jpg" style="width:100%;min-height:153px;max-height:333px">
+				
+			</div>
+
+			<div class="mySlides fade">
+			
+				<img src="TrustAllah.jpg" style="width:100%;min-height:153px;max-height:333px">
+				
+			</div>
+
+		</div>
+		<br>
+
+		<div style="text-align:center">
+		
+			<span class="dot"></span> 
+			<span class="dot"></span> 
+			<span class="dot"></span>
+			
+		</div>
+	
+	</header>
 	
 	<!-- Page Container -->
 	<div class="w3-content w3-margin-top" style="max-width:1400px;">
@@ -88,7 +181,7 @@
 			<!-- Left Column -->
 			<div class="w3-third">
 
-				<div class="w3-white w3-text-grey w3-card-4">
+				<div class="w3-white w3-card-4">
 				
 					<div class="w3-display-container">
 					
@@ -102,7 +195,7 @@
 						<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-green"></i>Lowell, MA</p>
 						<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-green"></i>basheerbilaal@gmail.com</p>
 						<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-green"></i>1 (305) 588-4504</p>
-						<a href="https://www.facebook.com/Imam-Basheer-Bilaal-256327691212996/" class="fa fa-facebook-official w3-hover-opacity" style="font-size:35px; color:green"></a>
+						<a href="https://www.facebook.com/Imam-Basheer-Bilaal-256327691212996/" class="fa fa-facebook-official w3-hover-opacity" style="font-size:30px; color:green; text-decoration: none;"><span style="font-size:65%; color:black; margin-left: 1em">Visit my Facebook page</span></a>
 						<hr>
 
 						<p class="w3-large">
@@ -134,7 +227,7 @@
 			<div class="w3-twothird">
 
 				<div class="w3-container w3-card-2 w3-white w3-margin-bottom">
-				<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-green"></i>Work Experience</h2>
+				<h2 class="w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-green"></i>Work Experience</h2>
 				
 				<div class="w3-container">
 				
@@ -200,7 +293,7 @@
 
 				<div class="w3-container w3-card-2 w3-white">
 				
-					<h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-green"></i>Education</h2>
+					<h2 class="w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-green"></i>Education</h2>
 					<div class="w3-container">
 					
 						<h5 class="w3-opacity"><b>University of Islamic Affairs Turkiye</b></h5>
@@ -263,6 +356,36 @@
 		<br>
 		
 	</footer>
+	
+	<script>
+	
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";  
+			}
+			
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}
+			
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 4000); // Change image every 4 seconds
+			
+		}
+		
+	</script>
 
 </body>
   
