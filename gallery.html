@@ -70,6 +70,22 @@
 	
 	a.active {background-color: #2DC72D;}
 	
+	/* Fading animation */
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+	@-webkit-keyframes fade {
+		from {opacity: .7} 
+		to {opacity: 1}
+	}
+	@keyframes fade {
+		from {opacity: .7} 
+		to {opacity: 1}
+	}
+	
 </style>
   
 <body class="bg">
@@ -104,19 +120,19 @@
 	<header class="w3-display-container w3-content w3-wide" style="max-width:2000px;min-width:300px" id="home">
 		
 		<!-- Automatic Slideshow Images -->
-		<div class="mySlides w3-display-container w3-center">
+		<div class="mySlides fade w3-display-container w3-center">
 			<img src="Cspan1.jpg" style="width:100%;min-height:103px;max-height:303px">
 		</div>
 		
-		<div class="mySlides w3-display-container w3-center">
+		<div class="mySlides fade w3-display-container w3-center">
 			<img src="Iftar1.JPG" style="width:100%;min-height:103px;max-height:303px">
 		</div>
 		
-		<div class="mySlides w3-display-container w3-center">
+		<div class="mySlides fade w3-display-container w3-center">
 			<img src="Prayer1.JPG" style="width:100%;min-height:103px;max-height:303px">
 		</div>
 		
-		<div class="mySlides w3-display-container w3-center">
+		<div class="mySlides fade w3-display-container w3-center">
 			<img src="Presentation1.JPG" style="width:100%;min-height:103px;max-height:303px">
 		</div>
 		<br>
