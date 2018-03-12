@@ -130,8 +130,9 @@
             letter-spacing: 1px;
         }
 
-        footer {
-            position: absolute;
+        #footerDiv {
+            display:block;
+            position:relative;
             bottom: 0;
             text-align: center;
             width: 100%;
@@ -167,7 +168,7 @@
     <br><br><br>
 
 
-            <div id="gallery" style="margin:0px auto;display:none;">
+            <div id="gallery" style="padding:10px; margin:0px auto;display:none; min-height:85%;">
 
                 <img alt="" src="basheer_img/img1.jpeg"
                      data-image="basheer_img/img1.jpeg"
@@ -259,11 +260,11 @@
 
             </div>
 
-    <footer>
+    <div id="footerDiv">
 
         <p>Copyright &copy; 2018</p>
 
-    </footer>
+    </div>
 
     <script>
         // Used to toggle the menu on small screens when clicking on the menu button
